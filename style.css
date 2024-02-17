@@ -1,4 +1,5 @@
-.logo::after{
-    content: STUDIO;
-    color: bl;
+.logo::before{
+    content: WEB;
+    color: blue
+
 }
