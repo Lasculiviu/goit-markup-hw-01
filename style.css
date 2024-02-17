@@ -1,9 +1,4 @@
 .logo::before {
     content: "WEB";
     color: blue;
-    
-
-}
-.logo{
-    color: black;
 }
