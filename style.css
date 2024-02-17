@@ -1,0 +1,4 @@
+.logo::after{
+    content: STUDIO;
+    color: bl;
+}
