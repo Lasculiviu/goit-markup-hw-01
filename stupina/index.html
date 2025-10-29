@@ -1,78 +1,129 @@
 <!DOCTYPE html>
 <html lang="ro">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Comentarii - StupinaPopa</title>
-    <style>
-      body {
-        margin: 0;
-        height: 100vh;
-        background-image: url("aaa.jpg");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        font-family: Arial, sans-serif;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comentarii Formate</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background-image: url("aaa.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-      .comentarii-container {
-        background: rgba(0, 0, 0, 0.6);
-        border-radius: 16px;
-        padding: 25px 35px;
-        color: white;
-        width: 600px;
-        max-height: 80vh;
-        overflow-y: auto;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-      }
+    .comentarii-container {
+      background: rgba(0,0,0,0.6);
+      border-radius: 16px;
+      padding: 25px 35px;
+      color: white;
+      width: 700px;
+      max-height: 80vh;
+      overflow-y: auto;
+      box-shadow: 0 0 20px rgba(0,0,0,0.7);
+    }
 
-      h1 {
-        text-align: center;
-        margin-bottom: 20px;
-        font-size: 28px;
-        color: gold;
-      }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 28px;
+      color: gold;
+    }
 
-      ol {
-        padding-left: 20px;
-      }
+    ol {
+      padding-left: 20px;
+    }
 
-      li {
-        margin-bottom: 10px;
-        line-height: 1.4;
-      }
+    li {
+      margin-bottom: 15px;
+      line-height: 1.5;
+      background: rgba(255,255,255,0.05);
+      padding: 10px 15px;
+      border-radius: 10px;
+    }
 
-      li::marker {
-        color: gold;
-        font-weight: bold;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="comentarii-container">
-      <h1>Comentarii</h1>
-      <ol id="lista-comentarii"></ol>
-    </div>
+    .username {
+      font-weight: bold;
+      color: #ffd700;
+      display: block;
+      margin-bottom: 5px;
+    }
 
-    <script>
-      // 🔹 Citește fișierul cu comentarii și creează lista automat
-      fetch("comentarii.txt")
-        .then((r) => r.text())
-        .then((text) => {
-          const lista = document.getElementById("lista-comentarii");
-          const linii = text.split("\n").filter((r) => r.trim() !== "");
-          linii.forEach((linie) => {
-            const li = document.createElement("li");
-            li.textContent = linie;
-            lista.appendChild(li);
-          });
-        })
-        .catch((err) => {
-          console.error("Eroare la citirea comentariilor:", err);
-        });
-    </script>
-  </body>
+    .mentions {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .mention {
+      color: #00ffff;
+      margin-right: 5px;
+    }
+
+    .date {
+      font-style: italic;
+      display: block;
+      margin-bottom: 5px;
+      color: #aaaaaa;
+    }
+
+    .text {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="comentarii-container">
+    <h1>Comentarii</h1>
+    <ol id="lista-comentarii"></ol>
+  </div>
+
+  <script>
+    // 🔹 Aici lipești array-ul JS generat cu Python
+    const comentarii = [
+`Cristina Damian798
+@Valentin Mitrica915 @Aura Aura @Elena Angela
+10-16
+Reply`,
+
+`Daniela Violeta Rafa
+@Gyorgy Anna @Adela Elena Adela @Vasilescu Adrian Valentin
+10-17
+Reply`,
+
+// … lipsește restul până la toate comentariile 700
+    ];
+
+    const lista = document.getElementById("lista-comentarii");
+
+    comentarii.forEach(bloc => {
+      const li = document.createElement("li");
+      const linii = bloc.split("\n");
+
+      const username = linii[0] || "";
+      const mentionsLine = linii[1] || "";
+      const date = linii[2] || "";
+      const mesaj = linii.slice(3).join(" ") || "";
+
+      const mentionsHtml = mentionsLine.split(" ").map(word => {
+        if(word.startsWith("@")) return `<span class="mention">${word}</span>`;
+        return word;
+      }).join(" ");
+
+      li.innerHTML = `
+        <span class="username">${username}</span>
+        <span class="mentions">${mentionsHtml}</span>
+        <span class="date">${date}</span>
+        <span class="text">${mesaj}</span>
+      `;
+
+      lista.appendChild(li);
+    });
+  </script>
+</body>
 </html>
