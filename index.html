@@ -1,39 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>StupinaPopa</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Comentarii - StupinaPopa</title>
     <style>
       body {
         margin: 0;
         height: 100vh;
-        background-image: url("aaa.jpg"); /* ← Aici pui imaginea ta */
+        background-image: url("aaa.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        background-image: url("pozetema1/aaa.jpg");
+        font-family: Arial, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
 
+      .comentarii-container {
+        background: rgba(0, 0, 0, 0.6);
+        border-radius: 16px;
+        padding: 25px 35px;
+        color: white;
+        width: 600px;
+        max-height: 80vh;
+        overflow-y: auto;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 28px;
+        color: gold;
+      }
+
+      ol {
+        padding-left: 20px;
+      }
+
+      li {
+        margin-bottom: 10px;
+        line-height: 1.4;
+      }
+
+      li::marker {
+        color: gold;
+        font-weight: bold;
       }
     </style>
   </head>
   <body>
-    <header></header>
-
-    <main>
-      <footer>
-        <p>Concurs Octombrie</p>
-      </footer>
+    <div class="comentarii-container">
       <h1>Comentarii</h1>
+      <ol id="lista-comentarii"></ol>
+    </div>
 
-<ul>
-  <li>🐝 Super stupină, mi-au plăcut mult produsele voastre!</li>
-  <li>🍯 Mierea de tei este excelentă, recomand!</li>
-  <li>🌻 Ambalaj frumos și livrare rapidă!</li>
-  <li>🐝 Așteptăm și polen crud la ofertă!</li>
-</ul>
-
-    </main>
+    <script>
+      // 🔹 Citește fișierul cu comentarii și creează lista automat
+      fetch("comentarii.txt")
+        .then((r) => r.text())
+        .then((text) => {
+          const lista = document.getElementById("lista-comentarii");
+          const linii = text.split("\n").filter((r) => r.trim() !== "");
+          linii.forEach((linie) => {
+            const li = document.createElement("li");
+            li.textContent = linie;
+            lista.appendChild(li);
+          });
+        })
+        .catch((err) => {
+          console.error("Eroare la citirea comentariilor:", err);
+        });
+    </script>
   </body>
 </html>
