@@ -78,6 +78,38 @@
   </style>
 </head>
 <body>
+  <script>
+fetch("comentarii.json")
+  .then(r => r.json())
+  .then(comentarii => {
+    const lista = document.getElementById("lista-comentarii");
+
+    comentarii.forEach(bloc => {
+      const li = document.createElement("li");
+      const linii = bloc.split("\n");
+
+      const username = linii[0] || "";
+      const mentionsLine = linii[1] || "";
+      const date = linii[2] || "";
+      const mesaj = linii.slice(3).join(" ") || "";
+
+      const mentionsHtml = mentionsLine.split(" ").map(word => {
+        if(word.startsWith("@")) return `<span class="mention">${word}</span>`;
+        return word;
+      }).join(" ");
+
+      li.innerHTML = `
+        <span class="username">${username}</span>
+        <span class="mentions">${mentionsHtml}</span>
+        <span class="date">${date}</span>
+        <span class="text">${mesaj}</span>
+      `;
+
+      lista.appendChild(li);
+    });
+  });
+</script>
+
   <div class="comentarii-container">
     <h1>Comentarii</h1>
     <ol id="lista-comentarii"></ol>
