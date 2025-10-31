@@ -129,7 +129,7 @@
     
     .input-area {
       width: 100%;
-      height: 150px;
+      height: 450px;
       padding: 20px;
       border: 2px solid #FFD700;
       border-radius: 15px;
@@ -454,29 +454,23 @@
   <div class="container">
     <header>
       <h1>🍯 Stupina Popa 🐝</h1>
-      <p class="subtitle">Miere Naturală de Albine • 100% Pură • Tradiție Românească</p>
-      <p class="tagline">"Din floare în floare, calitate superioară!"</p>
+      <p class="subtitle">Concursul din luna octombrie</p>
+      <p class="tagline">Succes tuturor!</p>
     </header>
     
     <div class="input-section">
       <h2 class="section-title">📋 Lista Utilizatori Comentarii</h2>
       <textarea class="input-area" id="inputText" placeholder="🐝 Lipește aici toate comentariile tale... (500+ comentarii)"></textarea>
       <button class="process-btn" id="processBtn">
-        🚀 Procesează Comentariile
+        🚀 Vezi Comentariile
       </button>
     </div>
     
     <div class="comments-container">
-      <div class="comments-header">
-        <h2>👥 Lista Utilizatori (<span id="totalCount">0</span>)</h2>
-        <div class="filter-buttons">
-          <button class="filter-btn active" data-filter="all">🍯 Toate Comentariile</button>
-          <button class="filter-btn" data-filter="mentions">🎯 Doar cu @ (<span id="mentionsCount">0</span>)</button>
-        </div>
-      </div>
       
-      <div class="comments-list" id="commentsList">
-        <div class="no-comments">📝 Lipește comentariile mai sus pentru a genera lista</div>
+      
+     
+       
       </div>
     </div>
   </div>
@@ -675,7 +669,7 @@
         // Efect de succes
         processBtn.textContent = '✅ Lista Generată!';
         setTimeout(() => {
-          processBtn.textContent = '🚀 Procesează Comentariile';
+          
         }, 2000);
       });
       
@@ -697,26 +691,307 @@
       });
       
       // Exemplu de date
-      const exampleData = `tincanica55
-
-@mult succes doamne ajuta multa sanatate...
-10-21
-Reply
-0
-
-Costel Cioby
-
-nu imi place mierea crema 😅...
-10-18
-Reply
-0
-
-Lylysor
-
-@Liliana@Andreea Beatrice @Dorin Cristinel
-1w ago
-Reply
-0`;
+      const exampleData = `1. tincanica55: Buna ziua am cumparat de la dum. produse Sunt foarte bune suntem 5 per.fiecare cu borcanul Nostrum va multumesc frumos si bunul dumezeu sa va OCROTEASCA oriunde SUNTETI Sunt de 76 ANI si nu stiu SA manevrez tel.doamne ajuta....
+2. Costel Cioby: nu imi place mierea crema 😅...
+3. Dancu Elena: doamne ajuta și succes în continuare 🙏🙏🙏
+4. danyela: nu știu sa etichetez
+5. 🇷🇴Gobi🇷🇴: Îi las pe altii sa câstige. Eu ma alint cu bomboanele astea la linguriță de la voi.💪🏻😅
+6. florinnicula277florin: va respecy
+7. Rami Ramona: @Ramona Lazar@Rareș Marian@,Gheorghe
+8. Lylysor: @Liliana@Andreea Beatrice @Dorin Cristinel
+9. semisemi047: @Elena, @Gabriel, @Viorel
+10. vasi: @katerina@Nicu@cristi
+11. Iulica Streche: VA RESPECT SI MULT SUCCES
+12. Marin Fechete: vreau
+13. tincanica55: @mult succes doamne ajuta multa sanatate sí fericire alaturi de cei dragi...
+14. tincanica55: mult succes bunul dumezeu sa va OCROTEASCA oriunde SUNTETI....@
+15. tincanica55: @nica tinca
+16. Motanul_lui_Szidygoia1_Vasy28✈: @🌺MARCELA🌺 @Mariamariaaaa @💞𝓐𝓷𝓴𝓾𝓽𝓪🕊️💞
+17. Balint Zoltan: @AlinaB @Suciu Adi @ClaraClaudya🍀
+18. Morningstar: @Mister Legend @Vaidean Ionut @Marius Daniel
+19. 🦋💎ANDRINA💎🦋: @ingridfurisch @calin @𝒞𝓇𝒾𝓈𝓉𝒾𝓃𝒶 🎀 🌺♥️
+20. Madalin.👤: @FORT ALIN @Manzat Cosmin @Gigi
+21. Adrian Banciu: @Gabriela @Ramona Lupu @Ioana Alexandra
+22. Daniela: @Gica Serbuta @🍓Adriana😋🍓 @user154609418672
+23. Daniela: @🍓Adriana😋🍓 @user154609418672@Gica Serbuta
+24. Cornelia Barbu257: @Barbuta Dan Dan @corneliavictor859 @Nuti Nuti
+25. Gabriela: @Adrian Banciu @brm_.bia @Ioana Alexandra
+26. Vlad Adrian: @Daniela , @CatyAnastasia18 , @Timi Bora , @ramona.aerinei
+27. Crissu Cristina: @✨𝓐𝓵𝓮𝔁 𝓓𝓪𝓷𝓲𝓮𝓵✨ @Nagy clara @N!kk!♈️
+28. 🍓Adriana😋🍓: @Daniela @🌱Daniela Chiru🌱 @Crăciun Aurelia-flo
+29. lehacimaria25: @Ionutz Lehaci @VERONICA IOANA @Cotuți Anamaria
+30. Maia Bianca Timis: @I. O. N. E. L. A. 🤣😘 @Ionuț🤍 @Andreea🧸❤️
+31. HandyMan-Emm: @Pădurariu Cerasel @yanisionut48 @Alin Marius Dumitru
+32. brm_.bia: @Adrian Banciu @Ioana Alexandra @Gabriela
+33. Camelia Dodis: @Bogdan Bodo ,@❤️❤️❤️Andreea Cristinuta❤️❤️❤️,@marius dodis
+34. da_vi_d.1111: @cas1an @Z. @•
+35. 🫂⛔️🚨DIANA.EDINA🚨⛔️🫂•꧂: @🌹🌹Heny Heny🌹🌹 @🐸🦎👀 @Maria Surd
+36. Daniela Popa1969: @Mirabela @Elena Elena @🇷🇴Nely_1979🇷🇴
+37. Ștefania❤️: @Petrariu Rares Constantin @Denisa💋 @Anastasia Filimon
+38. Madalin.👤: @Daliana Florea @roxanamoldovan274 @liv🪐
+39. Cristina Damian798: @Adrian B. Valentin @Rodica Anghel @damiancornelus
+40. AnDrEi98: @Vodă Lucian @Rares Popa @Sandra Suhăreanu
+41. Andrei Popa: @Viorel Mihai @Valentin Niculae @Ionuţ Alexandru Popa
+42. miha: @Tolan Ramona @Ana Maria @Camelia Ciubotaru
+43. Cristina Damian798: @Florin Ionita @Rodica Florescu @aladin
+44. Mut Teodora: @alexandramaria @Ionela Maria @Nicolae Ilieșiu
+45. Valentina Alexandra: @Ioana ionela 💞💞 @raluca_diaconescu @Nicusor Ghidia
+46. Cristina Damian798: @Ion Crevelescu @Felician Scarlat @Roxana Maria State
+47. Valentina Alexandra: @Raluca Elena Ungurea @@robertaana98 @raducanu ionela
+48. Cristina Damian798: @George Miritescu @Bogdan @bia._.nico
+49. Cristina Damian798: @George Miritescu @Atila @Carmen
+50. 𝓜𝓪𝓻𝓲𝓪–𝓖𝓮𝓸𝓻𝓰𝓲𝓪𝓷𝓪✨: @adriana👸🏻🫧 @Elena @🌼 E m i l i a 🌼
+51. xxl0930: @Liviu Ursuț @♥️Anamaria♥️@AleC
+52. Ana Maria Condurat: @haidaucatalin @liviu @Flow
+53. Stefania Mihaela Diaconescu: @Oana Tricolici @Stefania Toader @🇷🇴Nely_1979🇷🇴
+54. simonamona94: @cristian @Alessandra Alle @224〆Darius
+55. 💓Alexandra❤: @Stefana Lazar @Ionica Valentina @oana
+56. sofiafuiorea: @user5886914852223 @Teodora Kabbara @Paula Medintu
+57. Mut Teodora: @Livius @Anamaria Cristina Tudoran @Camy Sava
+58. Flutur Sorina Jana: @Alina Alinutza @Marinela Flutur @Daniel Calin
+59. Bârlea Marius: @ @Maryna Corches @Barlea Rodica @Cosmyn Doryn Patronu
+60. Claudia Mihet: @Daniela Popa1969 @Daniela Violeta Rafa @♥️Dobre Olimpia ♥
+61. raluca_diaconescu: @Ion Gaftoneanu @🍂🍁Maria🍁🍂 @Mariana Podariu
+62. Roxana Popa: @Daniela Popa1969 @Georgiana Popi @Ana Besna479
+63. Alina Mocanu686: @Sion Gabi@Gabriela Ciubotaru@gabrielabercusi19
+64. Suceava Just: @jenysandu5 @ElenaDoina @AlexAndrA (@mamiycarla)
+65. Raul: @Rebeca LR ,@Ralu🪢 @Raluca🦩
+66. Georgiana Popi: @Lucaci Aurora Carmen @Nicoleta FlorentinaP @elladanny
+67. CIUCIS'FISHERMAN: @Maria @kiki @RusMihai22
+68. 𝓜𝓪𝓻𝓲𝓪–𝓖𝓮𝓸𝓻𝓰𝓲𝓪𝓷𝓪✨: @Angel @Andrei Nenciu @Kristiana3
+69. poponeamihaela: @Deloiu Mihaela @Oana Cristina Panait @💫❤️OanaGeorgiana❤
+70. 🧚🏻‍♀️Mădă ღ: @Ramona Jb @Mihaela Ivăncică @Andreea Mirea
+71. Cristina Damian798: @Oana Nicoleta @Ion Crevelescu @georgetarodicakel0
+72. Cristina_Tyna22: @Oana Cristina Panait @Gabriela Nicoleta @Tiejan Csilla
+73. Valentina Alexandra: @Yry Denis @Yummy Expert @yubesc dc sunt yubită Bodolea
+74.  ❤️⭐️💙𝑽𝒊𝒐𝒓𝒆𝒍𝑯𝒂ș𝒂🦁: @Ionut✨ @Sebi @grasu 01
+75. 💓Alexandra❤: @getaconstantin51 @💜Larisa Sandra Man💜@Anastasia Anna
+76. Paulllinaa: @Simona Gabriela Badea @Lucaci Aurora Carmen @Ioana Bistriceanu970
+77. Attila Frunza: @Reka Toth @Réka Frunza @Gizella Zolti
+78. Cristina Damian798: @Elena Angela @Roxana Maria State @Ion Crevelescu
+79. Marius Negre100: @BYD-U @Angelica Monica Negr @Negre Rebeca Anita
+80. Cristina Damian798: @Gaby @andreeabulete1 @Lucy
+81. Alexa✨🌛: @Tatiana Sorina @Deloiu Mihaela @Daniela Popa1969
+82. helen 35: @Elena Radosu @Oana Radosu @claudia
+83. Cristina Damian798: @darindaugheorghita493@gmail.co @Oana Tricolici @AURELIACalin
+84. Florentin🐝🐝🐝💕: @🔪𝑪𝒉𝒆𝒇.Cătălin.🇧🇪Belgia @Cristian Dumitrascu @💎Matei💎
+85. Georgiana Georgi: @Nicola Stanila @Angela Chilianu @Lucia Amariei ❤
+86. Gică Bîrsan: @Claudia Lore @Daniela Popa1969 @Dorina Buzatu
+87. Cristina Damian798: @🍂🍁Maria🍁🍂 @Michel.B @🧡Mirabela Sandru🎀🐾
+88. alexandra: @Lupu Agro@@Clau. 21@Mari Sandu213
+89. Mihaela Alice: @Alexa✨🌛 @🌼Lexifield33🌼 @🇷🇴Nely_1979🇷🇴
+90. Moldo: @Moldo @Dani @Maria Moldovan
+91. Cornelia Popa33: @Cristi Runcan @DJ PRISLY MC @Irina Albac
+92. Cristina Damian798: @Maria Madalina @🍂🍁Maria🍁🍂 @Maria Ignat
+93. Anastasia Anna: @Gianina Gianina @georgetaborca6 @🩷Andreea🌼Ungureanu💜
+94. lehacimaria25: @monicabobol @Lică Onișor. @Lavinia_maria
+95. Andreea Voicu: @aureliasirbu935 @dimofte @Flutur Sorina Jana
+96. Y❤️Love 6️⃣9️⃣: @Prăjiturica @ingridfurisch @Mă tu știiii 🌶
+97. Cristina Damian798: @aladin @Rodica @Radian1986
+98. Kitty Cristina Dragomir: @°ionela♧ @Dani 🫵🏻🫶🏼 @Allexaa
+99. 🅜🅐🅡🅘🅐🅝: @lucianvasilerosca @Bobby Guetta @RobertRRR
+100. Lascu🇷🇴: @Lascu Damaris 💖♎️ @Liviu Lascu @Ms.06.Nku
+101. Valentina Alexandra: @Romeo @Red Velvet
+102. Cristina Damian798: @andreeapotec @adyy @Dan Dan
+103. Marasescu Giorgia: @Constantin Rusa @anaaachim @Valentina Alexandra
+104. Andrei Liga: @adeadelina447 @@NoOne @Alin Schiau
+105. elenaerica3131: @ancadamian444 @Anduta93 @Adrian Craciun
+106. Morningstar: @Lucian Iulian9473 @danmoldovan70 @Doar Eu
+107. Maria: @georgeta @elenacimpoesu1 @Elena Meorcaneanu
+108. 🇹🇩𝗟𝗲𝗴𝗼𝗹𝗮𝘀🇹🇩: Mult succes 🙏 @🎰 ,@Tibi Dima ,@Dima Bebe
+109. Maria: @Dumitru @Aurelia Catrina @elenaerica3131
+110. Morningstar: @Spircaci George @Alin @Onea Alexandru
+111. Maria: @Ioana Bistriceanu970 @Nico Bîrsan @Cobra Neagră
+112. Ionela Nicolae: @Darius IG @Jean Robert Dubois @madalinarata50
+113. Gygy83: @Lucaci Aurora Carmen @Caty Vieriu @Ana Besna479
+114. georgeta: @Crina Maria @Maria @Dumitru
+115. Morningstar: @Ștefan @Lore.M @Cristian Enuica
+116. georgeta: @Elena Ra @Ioana Bistriceanu970 @elenaerica3131
+117. AureliaAura: @🥷🏻 @Alexandru17 @ralucavarga21
+118. georgeta: @elenacimpoesu1 @Ecaterina Vieriu @Ionela Nicolae
+119. Morningstar: @lascuadrian2 @cornelsuciu4 @CAFESSI.RO
+120. Dumitru: @georgeta @Maria @Simona Bucur
+121. Cristina Damian798: @gabi paros @Roxana Maria State @Elena Cristea
+122. Morningstar: @Moldovan Radu @stefanromulusmorar @Monica 77
+123. Dumitru: @elenaerica3131 @Ionela Nicolae @elenacimpoesu1
+124. Ionela Nicolae: @Rusu nicoleta @Mary Maria @afimiasuta
+125. iulianabratu13: @Andra Criss @Mioara Rosu288 @Oana Cristina Panait
+126. Morningstar: @Roby G @Betty 77225 @ovidiu popa
+127. iulianabratu13: @Aurelia Catrina @Daniela Violeta Rafa @Corina Bedreag
+128. Valentina Alexandra: @Ionut Cristian @izabella @Ion Marius
+129. iulianabratu13: @Simona Gabriela Badea @Claudia Mihet @Ecaterina Vieriu
+130. LoryL: @Cristina Sandu ✨ @chrisTEA @Daniela@22
+131. iulianabratu13: @Rodica Bacanu525 @floryburcea497 @Nicoleta Larisa Cobuz👀
+132. Valentina Alexandra: @Ionut Cristian @izabella @Ion Marius
+133. Andra Criss: @Monica Adriana Nicolai @Nicoleta Larisa Cobuz👀 @Mioara Rosu288
+134. Ana-Cristina Vacaru: @Oana @Ana-Maria💓 @Florin Vacaru15
+135. Andra Criss: @Daniela Violeta Rafa @Valentina Andreea ❤️👸 @Elena Stan
+136. Ionela Nicolae: @Petruta Burteaalexandra @Maria Suta60 @Madalina Violeta
+137. Ionela Nicolae: @Alexandra Denisel @Daniel Suta @afimia0
+138. Ionela Nicolae: @Georgiana Burtea @Madalina Violeta @Rusu nicoleta
+139. Andra Criss: @Tarziu Mirela @Coryna Maria @Iulia Iasmina
+140. Ana-Cristina Vacaru: ❤❤❤
+141. Valentina Alexandra: @Marasescu Giorgia @Alina Dan Dobre @Andreea
+142. Valentina Alexandra: @cici11 @Mihaela Alice @Ecaterina Vieriu
+143. Valentina Alexandra: @Ecaterina Vieriu @elenacimpoesu1 @DAU.CU.HATE
+144. Andra Criss: @Luminita @Dima Ștefania Diana @iulianabratu13
+145. Valentina Alexandra: @Rafaela @raluca_diaconescu @Ramona Mihu
+146. Valentina Alexandra: @Marasescu Giorgia @Ionut Cristian @Ionut Ieftimie
+147. Valentina Alexandra: @Roxana Maria State @Narcisa ❤️❤️❤️@Ramona Mihu
+148. Valentina Alexandra: @Rafaela @dianaaaa20 @Roxana Maria State @Roxana
+149. Valentina Alexandra: @Alina Dan Dobre @adina @Andreea
+150. Valentina Alexandra: @Tiamstore @Cobra Neagră @Raica Ciprian
+151. Ana Besna479: @Annya Ana @💜Larisa Sandra Man💜@Trica Viorica
+152. Valentina Alexandra: @Raica Ciprian @Roxanaa @Ramona Mihu @Roxana Maria State
+153. Valentina Alexandra: @Herbaris-Detergenți naturali @Tantica @Deloiu Mihaela 1
+154. Valentina Alexandra: @MadalinaGav @cici11 @Cofetaria Ana State
+155. Morningstar: @Florin @Florin Ionuț @Spircaci George
+156. Valentina Alexandra: @Marasescu Giorgia @Ionut Ieftimie @adina
+157. Valentina Alexandra: @Andreea @Narcisa ❤️❤️❤️@Melania ioana
+158. Daniela Popa1969: @Alexuța @Rafaela @Aurelia Catrina
+159. Valentina Alexandra: @Melania ioana @yzabela🌸 @Yzabela Ady @
+160. Valentina Alexandra: @Marasescu Giorgia @Ionut Ieftimie @Alina Aly
+161. Ana Besna479: @Georgiana Popi @Aurelia Catrina @Stefania Mihaela Diaconescu
+162. Valentina Alexandra: @istrate49 @ionbudulus8 !@Ionut Preda268
+163. Valentina Alexandra: @Lorelay_121111 @Lucia Gierth @Lucy
+164. Mihaela Carp: @Doina Stefan @Roxana Elena @alina
+165. Valentina Alexandra: @Deloiu Mihaela 1 @Tantica @Bianca Roxana
+166. Ionela Nicolae: @Georgiana Burtea @Rusu Nicoleta @Floriana
+167. Valentina Alexandra: @Ungureanu Mihaela @Elena @user1113993148136
+168. Valentina Alexandra: @Rafaela @Roxana Maria State @robertaana98
+169. elenaerica3131: @Nicoleta @Nico Bîrsan @Nicoleta Ovidenie
+170. elenaerica3131: @Elena Elly106 @Ella Ella🏳️‍🌈 @Elena dumitrascu
+171. elenaerica3131: @💎𝓔𝓵𝓮𝓷𝓾ș💎 @💝Elena💝 @Emy
+172. elenaerica3131: @Alina Mocanu686 @Alexandrica Cornelia @Elena Ra
+173. elenaerica3131: @Claudia Fortu @Camy Cam @Dumitru
+174. elenaerica3131: @Crina Maria @Cati Cercelaru @Claudia Mihet
+175. elenaerica3131: @laura @LIon81 @lauraolteanu63
+176. elenaerica3131: @Rares Andrei Ion @Mihaela Mariana Ene @Monica Adriana Nicolai
+177. elenaerica3131: @raluca_diaconescu @Ramona_Maria @Rafaela
+178. elenaerica3131: @Rusu Mărioara @ElenaMariaJara @leontinpavelciutu
+179. Cristina Damian798: @Gheorghe Darandau @Gabriela🥰🥰🥰🥰 @user87291934288
+180. Valentina Alexandra: @Silviu23 @Ana💙 @Lavinia Olaru
+181. Valentina Alexandra: @Lavinia Olaru @Transfair Focsani @Tatiana Sorina
+182. Valentina Alexandra: @Cristina Criss 14 @Gică Bîrsan @acasalamunte.ro
+183. Valentina Alexandra: @bytzagabytza @mitroiudumitru @mattifashion
+184. Valentina Alexandra: @elenacimpoesu1 @Elena Angela @Rafaela
+185. Valentina Alexandra: @Alina Aly @Alina Dan Dobre @adina
+186. Valentina Alexandra: @Marasescu Giorgia @Ionut Cristian @Ionut Ieftimie
+187. Daniela Popa1969: @Roxana Popa @Monica Adriana Nicolai @Rodica Bacanu525
+188. poponeamihaela: @Trica Viorica @anutatudorache @Daniela Valentina Pr
+189. danamicro3: @Rodica Ionela 25 @Gica Flautaru @Danuta30
+190. Cristina Damian798: @Elena Angela @melindanagy221 @Fily
+191. Radanov Oana: @Drinceanu Cătălin @cristinamaria @Mirabela
+192. raluca_diaconescu: @RamoDaniela88 @Ramona Elena @Ramona Filip
+193. elenaerica3131: @Maria @Monica Adriana Nicolai @Mirela Liliana
+194. Cristina Sandu ✨: @Raluca Georgiana @corina2345 @Marius Nita
+195. raluca_diaconescu: @GabrielaBalasaMatei @Gabriela Sinca @gabrielafazakas
+196. Mihai George: @unu.iandrei @Ralucaa Ioanaa @Cristina Alexandra
+197. elenaerica3131: @Deloiu Mihaela @Dany18 @Dorina B
+198. Andreea Ungureanu: @Daniela Cornelia Mor @Elisabeta Ungurea348 @Ioana Bistriceanu970
+199. elenaerica3131: @Gabriela Gabriela @georgeta @Gabriela Sinca
+200. raluca_diaconescu: @laviniabianca660 @Gina @Gabriela Sinka
+201. Andreea Ungureanu: @Corina Bedreag @Varvara Varvara @♥️Dobre Olimpia ♥
+202. Imi: @Eliza Iozefina @_denis_ @Karla 🩶
+203. Radanov Oana: @Radanov Deiana @Zlatko Sarbu @danadehelean
+204. Andreea Ungureanu: @Aurelia Catrina @danamicro3 @Cosmina Alin
+205. Andreea Ungureanu: @Ade Adelina @Tina Cristina @Daniela Violeta Rafa
+206. elenaerica3131: @tudor_marcus @Aurelia Catrina @Alexa✨🌛
+207. raluca_diaconescu: @Deloiu Mihaela @Mihaela Mariana Ene @Filip Diana Roxana
+208. Ana Rafay: @Gyorgy Anna @vioricaapostol123 @Beatrice M Gratiela
+209. Ana Rafay: @Varvara Varvara @Maria Budescu @Daniela Violeta Rafa
+210. elenaerica3131: @amylivin3 @Albu Angela @Mona Nicolai
+211. Mirela Neacsu: @🌹🇷🇴COSMIN 2.10🌹🇹🇩 @Oana Marcu @Stela
+212. Ana Rafay: @Vasile Barabula @Jean Apostol767 @Sigismund Rafay
+213. raluca_diaconescu: @Georgiana Popi @puiumihet @Paula Marin
+214. elenaerica3131: @Albu Angela @Andra Nicole Elena @Ana Besna479
+215. raluca_diaconescu: @Crina Maria @🇷🇴Nely_1979🇷🇴 @Ramona Elena
+216. Ana Rafay: @Adela Elena Adela Elena @Aniko Beres262 @Gyorgy Annaa
+217. raluca_diaconescu: @Oana Loredana Misara @Daniela Cornelia Mor @elenaerica3131
+218. Valentina Alexandra: @bytzagabytza @Silviu23 @Ana💙
+219. Valentina Alexandra: @Mihaela Alice @Ioana ionela 💞💞 @Nicusor Ghidia
+220. Valentina Alexandra: @Simona Bucur @Viorel Ilioiu @🇷🇴Nely_1979🇷🇴
+221. Valentina Alexandra: @Magazinul Printeselor 👑 @Elena Angela @madalinamatrana
+222. Valentina Alexandra: @Narcisa ❤️❤️❤️@Melania ioana @Deloiu Mihaela 1
+223. Valentina Alexandra: @Marasescu Giorgia @Ionut Cristian @Ionut Ieftimie
+224. Adrian Bogdan: @Flori Cojocaru @j1st_Luca
+225. Anastasia Anna: @Vasile Buzea @Savu Cristina @RobynGina
+226. 💓Alexandra❤: @Irina Vaideanu @Lozneanu Oana @acasalamunte.ro
+227. 💓Alexandra❤: @Ionela Alexandra @Claudia Fortu @Daniela Valentina Pr
+228. Cristina_Tyna22: @Viktor Iosif @monyo242 @Valeria Chertes
+229. CIUCIS46: @Gabi @Marya Stancu❤️@NILEN7
+230. Valentina Alexandra: @Ana💙 @bomboane.bucuria.online @Lavinia Olaru
+231. Valentina Alexandra: @Raica Ciprian @Cristina Criss 14 @Cobra Neagră
+232. Valentina Alexandra: @cici11 @Ionutz Dragutzu @🇷🇴Nely_1979🇷🇴
+233. Valentina Alexandra: @Cofetaria Ana State @MadalinaGav @cici11
+234. Valentina Alexandra: @niku_263 @Ionela Roxana Pacala @Lucaci Aurora Carmen
+235. Valentina Alexandra: @Bianca Roxana @Bogas @Seras Paul Maramu' 🇷🇴🧭
+236. Valentina Alexandra: @Andreea @Narcisa ❤️❤️❤️@Melania ioana
+237. Mut Teodora: @Cosmin Dan @Avram Ioan @Nela Mariana
+238. Valentina Alexandra: @Marasescu Giorgia @Ionut Cristian @Ionut Ieftimie
+239. Mut Teodora: @Mirabela Libana @Dorina Si Claudiu @Camelianadia
+240. Ana Rafay: @Vasile Barabula @Vasilescu Adrian Valentin @Faluvegi Iuliana
+241. Ana Rafay: @Vasile Barabula @Jean Apostol767 @Sigismund Rafay
+242. Căpîlnean Andrei: @David Curtușan @Nicolae Daniel@Pădurean Dorian
+243. Sigismund Rafay: @Vasile Barabula @Ana Rafay @Adela Elena Adela
+244. Valentina Alexandra: @🇷🇴Nely_1979🇷🇴 @Ionutz Dragutzu @nicogeorgi
+245. Valentina Alexandra: @nicogeorgi @Viorel Ilioiu @Olteanu Maria Magdal
+246. Valentina Alexandra: @Cristina Criss 14 @Cobra Neagră @Gică Bîrsan
+247. Valentina Alexandra: @Gică Bîrsan @acasalamunte.ro @Ioana ionela 💞💞
+248. Valentina Alexandra: @Bianca Roxana @madalinamatrana @elenacimpoesu1
+249. Valentina Alexandra: @🇷🇴Nely_1979🇷🇴 @Ionutz Dragutzu @nicogeorgi
+250. Valentina Alexandra: @Cofetaria Ana State @MadalinaGav @cici11
+251. Valentina Alexandra: @Deloiu Mihaela 1 @Herbaris-Detergenți naturali @Tantica
+252. Valentina Alexandra: @Marasescu Giorgia @Ionut Cristian @Ionut Ieftimie
+253. Valentina Alexandra: @Melania ioana @Narcisa ❤️❤️❤️@Andreea
+254. Valentina Alexandra: @Simona Bucur @Raica Ciprian @Tiamstore
+255. Valentina Alexandra: @Nico💕 @Florica Duca580 @Perla ❤️❤️
+256. Valentina Alexandra: @Ioana ionela 💞💞 @acasalamunte.ro @raluca_diaconescu
+257. Valentina Alexandra: @Ionutz Dragutzu @nicogeorgi @Viorel Ilioiu
+258. Valentina Alexandra: @MadalinaGav @cici11 @Clino
+259. Costel Ungureanu: @Cristian Marinescu @Egypt Gentleman Adventures @Nicolae Marius Hamba
+260. Valentina Alexandra: @Narcisa ❤️❤️❤️@Melania ioana @Deloiu Mihaela 1
+261. Estera Pasu Pasu: @Padurean Lidia @Elena Plesa @Anamaria sofia
+262. Daniel-Cosma☑️: @❤️Bianca Ionela Stamate❤️@Magazinul de la Stadion @Catalin Grigore
+263. Pasu Ionut Elysei: @Ioan Geo @🇩🇪𝐜𝐑ⓘᔕ𝔱ᶤ𝐚𝔫🧡 @Samira Samir
+264. Varvara Varvara: @Gyorgy Anna @Adela Elena Adela @Aniko Béres
+265. Varvara Varvara: @Aniko Béres @Daniela Violeta Rafa @Sigismund Rafay
+266. Valentina Alexandra: @Adriana Ljuma Teodor @niku_263 @Ionela Roxana Pacala
+267. Valentina Alexandra: @Cristina Criss 14 @Cobra Neagră @Gică Bîrsan
+268. Valentina Alexandra: @Seras Paul Maramu' 🇷🇴🧭 @madalinamatrana @elenacimpoesu1
+269. Valentina Alexandra: @Andreea @Herbaris-Detergenți naturali @Bianca Roxana
+270. Valentina Alexandra: @Alina Aly @adina @Alina Dan Dobre
+271. Valentina Alexandra: @Marasescu Giorgia @Ionut Cristian @Ionut Ieftimie
+272. Maria Savu: 🤗🤗🤗
+273. Varvara Varvara: @Gabriela ungureanu @Faluvegi Iuliana @Ana Rafay
+274. Cristina Damian798: @Vivi Madalina Vivi @Victorita Constantin @Violeta
+275. Andrei27: @BlackWidow @laurentiugeorge85 @Gabriel Ficleanu
+276. Cristinel Ciocoiu: @doinacroitoru715 @Valentina Ristea @lenus Ciocoiu
+277. Ciocoiu Mihaela: @Gabriela Drăgoi @Monica Adriana Nicolai @Viorica Trica
+278. ramona: @Adana @Caprariu Razvan Alex @David Caprariu
+279. Emanuel Samoila: @🇷🇴Denisss🇷🇴 @iliewrm @CIBI
+280. Vitamina: @Pionul din Oglinda @Diana Elena @Paul Nicolau
+281. 𝑺𝒂𝒎𝒑𝒆𝒚 𝑷𝒆𝒔𝒄𝒂𝒓𝒖𝒍: @Rebeca_Re @Kalma @🦋💎ANDRINA💎🦋
+282. Marcel Floari: @F. Eric 2010 @Floari Alina @Eugică
+283. celsiapop: @Hainute SH Mixte,@Alexia Hodo ,@Ana Panaite .
+284. Valentina Alexandra: @Elena Angela @Zenaida Zora @mattifashion
+285. Mi88HAI: @Gabriel Adrian @C.Ana @Alin Avasiloaie
+286. Valentina Alexandra: @raluca_diaconescu @Gică Bîrsan @velvegiftshop.ideidecadouri
+287. Valentina Alexandra: @𝐁𝐈𝐀𝐍𝐂𝐀 𝐄𝐍𝐀𝐂𝐇𝐄 @Carmen900🤗🥰 @Silviu23
+288. Valentina Alexandra: @Marcu Iasmina @Bianca Roxana @Clino
+289. Valentina Alexandra: @Ionut Cristian @Marasescu Giorgia @Ionut Ieftimie
+290. flr3f: @Andreea Bdx @George Madalin @Sergyu Sergiu368
+291. Mioritic România: @Karla Travel @Georgiana Cristina @Crina
+292. Mihăiță Zdrite ✅: @Laviniu @Andrei Handrea @Lucas Birau
+293. Crisan Rozalia: @Cornel Rezmives @Medicina Naturista @Ionut Crăciunescu
+294. Florin badea: @Ion Badea @Marian Paduroiu @paduroiumartian
+295. irimescuioanraul: @Ionela 19 @.ovidiu16 @apis-blaj
+296. Ella: @Tatiana Mocanu @vicky @florina 7409
+297. Ella: @Onu Catalina @tatianaartisciuc6 @Laura Mihai
+298. Ella: @ionelamanolache68 @irinabalan61 @Elena Lipan
+299. Ungureanu Mihaela: @Dode Daniela @tinnaoprea @Maria Magdalena 😈👑
+300. Ungureanu Mihaela: @Rafaela @Elena dumitrascu @Roxana Maria State
+`;
 
       inputText.value = exampleData;
     });
